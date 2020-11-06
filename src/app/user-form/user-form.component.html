@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="container-fluid">
+    <form [formGroup]="userFormGroup" (ngSubmit)="onSubmit()" >
+      <div formGroupName="user" class="main-content user-form">
+        <h3 class="display-3">{{ title }}</h3>
+        <div class="form-group">
+          <label for="first_name">First Name:</label>
+          <input type="text" class="form-control" id="first_name" placeholder="Enter First Name" name="first_name"
+                 formControlName="first_name">
+        </div>
+        <div class="form-group">
+          <label for="last_name">Last Name:</label>
+          <input type="text" class="form-control" id="last_name" placeholder="Enter Last Name" name="last_name"
+                 formControlName="last_name">
+        </div>
+        <div class="form-group">
+          <label for="middle_name">Middle Name:</label>
+          <input type="text" class="form-control" id="middle_name" placeholder="Enter Middle Name" name="middle_name"
+                 formControlName="middle_name">
+        </div>
+        <div class="form-group">
+          <label for="email">Middle Name:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email"
+                 formControlName="email">
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-dark" >Submit</button>
+      </div>
+      <br><br>
+      <div class="text-center">
+        <a class="vertical-center" routerLink="/users">Back to Users</a>
+      </div>
+    </form>
+  </div>
+</div>

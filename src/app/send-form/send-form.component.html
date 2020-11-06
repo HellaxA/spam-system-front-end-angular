@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="container-fluid">
+    <form [formGroup]="messageFormGroup" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+
+        <label for="currentTopic" class="display-4 mt-5" >Write your own topic:
+          <input type="text" class="form-control mt-3" id="currentTopic"
+                 placeholder="Enter Message To Send" name="currentTopic"
+                 formControlName="currentTopic">
+        </label>
+
+        <label for="selectMessage" class="display-4">Choose Message:
+          <select formControlName="currentMessage"
+                  class="browser-default custom-select custom-select"
+                  id="selectMessage">
+            <option *ngFor="let message of messages">
+              {{ message }}
+            </option>
+          </select>
+        </label>
+
+        <label for="currentMessage" class="display-4">Write your own message:
+        <input type="text" class="form-control mt-3" id="currentMessage"
+               placeholder="Enter Message To Send" name="currentMessage"
+               formControlName="currentMessage">
+        </label>
+
+        <div class="mt-5">
+          <button type="submit" class="btn btn-dark" >Submit</button>
+        </div>
+
+        <div class="mt-2">
+          <a class="vertical-center" routerLink="/users">Back to Users</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
